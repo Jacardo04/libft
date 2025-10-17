@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:21:37 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/14 18:31:18 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 17:39:30 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_atoi(const char *nptr)
 	result = 0;
 	while (ft_isspace(nptr[i]))
 		i++;
-	if (nptr[i] == 43 && nptr[i + 1] != 45)
+	if (nptr[i] == '+' && nptr[i + 1] != '-')
 		i++;
-	if (nptr[i] == 45)
+	if (nptr[i] == '-')
 	{
 		sign = -1;
 		i++;

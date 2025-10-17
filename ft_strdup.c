@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 18:09:34 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/16 16:24:00 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:38:17 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ char	*ft_strdup(const char *s)
 	if (!dst)
 		return (NULL);
 	i = 0;
-	while (s[i++])
-		dst[i] = s[i];
-	dst[i] = 0;
+	while (s[i])
+		dst[i++] = s[i];
+	dst[i] = '\0';
 	return (dst);
 }
