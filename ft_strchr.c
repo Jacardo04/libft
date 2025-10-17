@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 17:03:55 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/13 17:38:16 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:50:10 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	j;
 
 	i = 0;
-	j = char(c);
+	j = (char)c;
 	while (s[i] != '\0')
 	{
 		if (s[i] == j)
