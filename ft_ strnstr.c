@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 20:19:15 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/14 18:41:53 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:59:00 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (i < len)
 	{
 		j = 0;
-		while (big[i + j] == small[j] && i + j < len && big[i + j])
+		while (big[i + j] == little[j] && i + j < len && big[i + j])
 		{
 			j++;
-			if (small[j] == '/0')
+			if (little[j] == '/0')
 				return ((char *)big + i);
 		}
 		i++;

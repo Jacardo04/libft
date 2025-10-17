@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:26:20 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/15 18:48:30 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:57:14 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	if (dstlen == size)
 		return (totallen);
 	while (src[i] != '\0' && dstlen + i < size - 1)
-		dst[dstlen + i] = src[i++] dst[dstlen + i] = '\0';
+		dst[dstlen + i] = src[i++];
+	dst[dstlen + i] = '\0';
 	return (totallen);
 }

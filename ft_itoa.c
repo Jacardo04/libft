@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:33:30 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 19:42:12 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 20:00:44 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 		result[mem_space] = (n % 10) + 48;
 		n = n / 10;
 	}
-	if (flag  == -1)
+	if (flag == -1)
 		result[0] = '-';
 	return (result);
 }

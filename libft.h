@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 00:39:53 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 19:53:24 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:58:08 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlen(const char *c);

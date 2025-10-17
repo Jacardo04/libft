@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 17:17:01 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/15 18:25:27 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/17 19:57:29 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 		if (i < n)
 		{
 			i++;
-			dest[i] = '\0';
+			dst[i] = '\0';
 		}
 		return ((char *)dst);
 	}
