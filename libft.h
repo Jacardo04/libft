@@ -6,14 +6,12 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 00:39:53 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 21:28:28 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/24 00:45:57 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -21,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlen(const char *c);
 int		ft_atoi(const char *nptr);
 char	*ft_strdup(const char *s);
-void	ft_bzero(size_t n, void *s);
+void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -32,7 +30,7 @@ char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
-void	*memmove(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -51,4 +49,5 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	**ft_split(const char *s, char c);
 #endif

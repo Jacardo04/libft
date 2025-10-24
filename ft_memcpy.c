@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 00:26:24 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/13 17:37:52 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 23:33:33 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	tmpd = dst;
 	tmps = src;
 	i = 0;
-	if (src == NULL || dst == NULL)
+	if (dst == NULL && src == NULL)
 		return (dst);
 	while (i < n)
 	{

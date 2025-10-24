@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 19:16:12 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/11 16:36:40 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/24 00:41:51 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 
 size_t	ft_strlen(const char *c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (!c[i])
-	{
-		return (0);
-	}
 	while (c[i])
 		i++;
 	return (i);

@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 15:21:37 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 17:39:30 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 21:04:09 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_atoi(const char *nptr)
 
 int	ft_isspace(int c)
 {
-	if (c >= 9 && c <= 13 || c == 32)
+	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);
 	return (0);
 }

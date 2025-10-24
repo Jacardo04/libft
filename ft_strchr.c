@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 17:03:55 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 19:50:10 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 22:51:46 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (j == '\0')
 		return ((char *)s + i);
-	return (0);
+	return (NULL);
 }

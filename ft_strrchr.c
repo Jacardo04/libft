@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 17:37:23 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/13 17:39:10 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/23 02:36:39 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,25 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
-	unsigned char	j;
-	unsigned char	*r;
+	int		i;
+	char	j;
 
-	i = 0;
-	j = (unsigned char)c;
+	i = ft_strlen(s);
+	j = (char)c;
 	if (j == '\0')
 		return ((char *)s + i);
-	while (s[i] != '\0')
+	while (--i > -1)
 	{
 		if (s[i] == j)
-			r = ((char *)s + i);
-		i++;
+			return ((char *)s + i);
 	}
 	if (j == '\0')
 		return ((char *)s + i);
-	else
-		return (r);
+	return (NULL);
 }
 
-//int	main(void)
-//{
-	//char name[] = "lebronnnnnn";
-	//printf("%s", ft_strrchr(name, 'b'));
-//}
+// int	main(void)
+// {
+// 	char name[] = "lebronnnnnn";
+// 	printf("%s", ft_strrchr(name, '\0'));
+// }

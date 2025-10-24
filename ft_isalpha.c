@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:48:29 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/13 17:37:05 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 21:49:49 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
+		return (c);
 	return (0);
 }

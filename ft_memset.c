@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 21:41:30 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/13 17:38:01 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 22:45:19 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (s == NULL)
-		return (0);
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = (unsigned char)c;

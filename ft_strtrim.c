@@ -6,46 +6,79 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 20:49:40 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 19:58:17 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/24 00:44:15 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-bool	is_set(char *set, char c)
+static int	start_trim(char const *s1, char const *set)
 {
-	int	i;
+	unsigned int	i;
+	int				j;
+	size_t			len;
 
+	len = ft_strlen(s1);
 	i = 0;
-	while (set[i++])
-		if (set[i] == c)
-			return (TRUE);
-	return (FALSE);
+	while (i < len)
+	{
+		j = 0;
+		while (set[j] != '\0')
+		{
+			if (s1[i] == set[j])
+				break ;
+			j++;
+		}
+		if (set[j] == '\0')
+			return (i);
+		i++;
+	}
+	return (i);
+}
+
+static int	end_trim(char const *s1, char const *set)
+{
+	unsigned int	i;
+	int				j;
+	unsigned int	t_len;
+
+	t_len = ft_strlen(s1);
+	i = 0;
+	while (i < t_len)
+	{
+		j = 0;
+		while (set[j] != '\0')
+		{
+			if (s1[t_len - i - 1] == set[j])
+				break ;
+			j++;
+		}
+		if (set[j] == '\0')
+			return (t_len - i);
+		i++;
+	}
+	return (t_len - i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		wc;
-	int		i;
-	int		j;
+	int		start;
+	int		end;
 	char	*result;
 
-	if (!set)
-		return (s1);
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
-	j = 0;
-	i = 0;
-	wc = 0;
-	while (s1[i++])
-		if (!is_set(set, s1[i]))
-			wc++;
-	result = malloc(wc + 1);
+	if (!(*s1))
+		return (ft_strdup(""));
+	if (!(*set))
+		return (ft_strdup(s1));
+	start = start_trim(s1, set);
+	end = end_trim(s1, set);
+	if (start >= end)
+		return (ft_strdup(""));
+	result = malloc(sizeof(char) * (end - start + 1));
 	if (!result)
 		return (NULL);
-	i = 0;
-	while (s1[i++])
-		if (!is_set(set, s1[i]))
-			result[j++] == set[i];
-	return (result[j] = '\0', result);
+	ft_strlcpy(result, s1 + start, end - start + 1);
+	return (result);
 }

@@ -6,13 +6,13 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 22:25:51 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/13 17:37:09 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 21:48:34 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(size_t n, void *s)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 

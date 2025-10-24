@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 17:26:51 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/17 20:00:24 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 23:14:47 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	i = 0;
 	while (s2[i])
 		d[j++] = s2[i++];
+	d[j] = '\0';
 	return (d);
 }
 

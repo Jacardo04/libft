@@ -6,7 +6,7 @@
 /*   By: jforbes <jforbes@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/09 17:56:37 by jforbes           #+#    #+#             */
-/*   Updated: 2025/10/14 18:34:17 by jforbes          ###   ########.fr       */
+/*   Updated: 2025/10/22 21:38:40 by jforbes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 39)
-		return (1);
+	if (c >= 48 && c <= 57)
+		return (c);
 	return (0);
 }
